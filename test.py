@@ -1,4 +1,4 @@
-x = 10
+x = 20
 while x > 0:
     print("Hello Zweiter Test")
-    x = x-1
+    x = x-2
