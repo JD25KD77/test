@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+%set the document class, this way latex knows the formatting of the document, the other popular one would be \documentclass{beamer} which gives slides. You can also add options to change font size etc.. Google as needed
+
+\usepackage{amssymb, amsthm, amsmath}
+\usepackage{comment, enumerate, enumitem}
+\usepackage{xcolor, float}
+\usepackage{tikz}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{theorem*}{Theorem}
+
+\newcommand\irregularcircle[2]{% radius, irregularity
+	\pgfextra {\pgfmathsetmacro\len{(#1)+rand*(#2)}}
+	+(0:\len pt)
+	\foreach \a in {10,20,...,350}{
+		\pgfextra {\pgfmathsetmacro\len{(#1)+rand*(#2)}}
+		-- +(\a:\len pt)
+	} -- cycle
+}
+
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem*{solution*}{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem*{hint}{Hint}
+\pgfplotsset{compat=1.15}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in}
+\addtolength{\textheight}{1.0in}
+
+\newcommand{\thedate}{\today}
+
+\begin{document}
+	%begins the document
+    \begin{center}
+        \textbf{\huge \scshape Effective Programming Practices for Economists - Assignment 1} \\ \vspace{1pt}
+    \centering\textbf{\thedate} \\ 
+    \item Janik Deutscher
+    \end{center}
+
+\section{Past experience doing research with a computer}  
+Description 
+
+
+
+\section{Exercises on Technology of Skill Formation}
+
+\subsection*{(a) Six stylized facts}
+\begin{itemize}
+    \item Ability gaps between individualsand  across  socioeconomic  groups  open  up  at  early  ages,  for  both  cognitive  and  noncognitive skills.
+    \item In  both  animal  and  human  species,  there  is  compelling  evidence  of  critical  and
+    sensitive periods in the development of the child.
+    \item Despite the low returns to interventions targeted toward disadvantaged adolescents,the empirical literature shows high economic returns for remedial investments in young disadvantaged children.
+    \item If early investment in disadvantaged children is not followed up by later investment, its effect at later ages is lessened.
+    \item The effects of credit constraints on a child’s adult outcomes depend on the age at which they bind for the child’s family.
+    \item Socioemotional (noncognitive) skills foster cognitive skills and are an important product of successful families and successful interventions in disadvantaged families.
+\end{itemize}
+
+\subsection*{(b) Description of model}
+Description of model 
+
+\subsection*{(c) Explanations of relevant concepts}
+
+    \subsubsection*{(i) Critical period}
+    If one stage alone is effective in producing a skill or ability, it is called a "critical period" for that skill. 
+    \subsubsection*{(ii) Sensitive period}
+    The stages that are more efficient in producing certain skills are called "sensitive periods" for the acquisition of those skills. 
+    \subsubsection*{(iii) Dynamic complementarity}
+    Skills produced at one stage raise the productivity of investment at subsequent stages.  
+
+   
+\subsection*{(d) Dynamic complementarity with linear production function}
+The production function is defined as $\theta_{t+1} = f_t(h,\theta_t,I_t)$, which can be written as $\theta_{t+1}=\alpha*h+\beta*\theta_t +\gamma*I_t$ for some $\alpha, \beta, \gamma \in \mathbb{R}_+$ if linearity is assumed. The second partial derivative can then be written as follows: 
+\begin{equation}
+    \frac{\partial^2 f_t(h,\theta_t,I_t)}{\partial \theta \partial I'_t} = \frac{\partial^2 (\alpha*h+\beta*\theta_t +\gamma*I_t)}{\partial \theta \partial I'_t} = \frac{\partial \beta}{\partial I'_t} = 0    
+\end{equation}
+
+\noindent The assumption made when choosing a linear production function is thus that dynamic complementarity does not exist. 
+
+\subsection*{(e) Ignoring differences between skills and test scores}
+Explanation
+
+\end{document}
